@@ -1,0 +1,1010 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+:root{
+    --first-color: rgba(10, 10, 51);
+    --text-color : rgba(21, 21, 100);
+    --background : #f2f2f2;
+    --scroll-thumb-color : rgba(21, 21, 100, 0.822);
+    --scroll-bar-color: rgba(91, 91, 202, 0.842);
+}
+
+
+*{
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+/* scrollbar */
+::-webkit-scrollbar{
+    width: .60rem;
+    background: var(--scroll-bar-color);
+    border-radius: .5rem;
+    z-index: -22;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--scroll-thumb-color);
+    border-radius: .5rem;
+
+}
+::-webkit-scrollbar-thumb:hover{
+    background: var(--text-color);
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+p{
+    font-size: 0.9rem;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.container{
+    width: 100%;
+    max-width: 1026px;
+    margin: 20px auto;
+}
+body{
+    background: #f2f2f2;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+nav{
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 60px;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.100);
+    z-index: 111;
+}
+nav.navscroll{
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.100);
+    border-radius: 2px solid gray;
+    transition: 0.4s;
+}
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-left{
+    flex:1;
+}
+.logo{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+.navCenter{
+    flex:4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navUl{
+    display: flex;
+    column-gap: 20px;
+}
+.navUl a{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    color: var(--first-color)
+}
+.bars{
+    font-size: 30px;
+    display: none;
+}
+.nav-right{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    padding: 10px 15px;
+    box-shadow: 5px 5px 5px rgba(211, 211, 211, 0.164);
+    border-radius: 50px;
+}
+.contact{
+    color: var(--first-color);
+    background: transparent;
+    padding: 6px 10px;
+    border: 2px solid var(--first-color);
+    border-radius: 0.9rem;
+}
+.sociaux{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+.face{
+    color:rgba(10, 10, 241, 0.877);
+}
+.twitter{
+    color:rgba(37, 37, 167, 0.904);
+}
+.insta{
+    color: rgba(179, 13, 13, 0.884);
+}
+.tube{
+    color: red;
+}
+
+header{
+    height: calc(100vh - 50px);
+    background: radial-gradient(rgba(0, 0, 0, 0.600),rgba(0, 0, 0, 0.582)), url('./assets/eglise.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.header-container2{
+    background: radial-gradient(rgba(0, 0, 0, 0.600),rgba(0, 0, 0, 0.582)), url('./assets/citeDeDieu.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.header-container3{
+    background: radial-gradient(rgba(0, 0, 0, 0.600),rgba(0, 0, 0, 0.582)), url('./assets/couple.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.btn-next{
+    display: none;
+}
+.header-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    gap: 20px;
+}
+.headerTitle{
+    font-size: 3.5rem;
+    color: #fff;
+    letter-spacing: 1;
+}
+.sousTitle{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.description-header{
+    font-size: 16px;
+    color: #fff;
+}
+.container-btn{
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+}
+.headerBtn{
+    padding: 10px 15px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    letter-spacing: 1;
+}
+.btnNoir{
+    background: #fff;
+    color: var(--first-color)
+}
+
+/*BIENVENU*/
+.bienvenu{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    background: var(--first-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    z-index: 111;
+}
+.bienvenu-txt{
+    flex:2;
+    margin-left: 180px;
+}
+.bienvenu-row-got{
+    flex: 1;
+    margin-right: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+.bienvenu-got{
+    background: red;
+    color:var(--first-color);
+    padding: 5px 10px;
+    border-radius: 0.9rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--background);
+}
+.times-icon{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+.times-icon:hover{
+    color: red;
+    cursor : pointer;
+}
+/*APROPOS*/
+.apropos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apropos-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 130px;
+    margin: 100px;
+    gap:10px;
+}
+.apropos-title::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    width: 300px;
+    height: 5px;
+    background: var(--first-color);
+
+}
+.title{
+    font-size: 2.4rem;
+    font-weight: 300;
+    letter-spacing: 2;
+    color: var(--first-color);
+}
+.sous-title-apropos{
+    font-size: 0.9rem;
+    letter-spacing: 1;
+    color: var(--first-color);
+
+}
+.apropos-row{
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 50px;
+}
+.apropos-img{
+    flex: 1;
+    position: relative;
+}
+.apropos-image{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+.apropos-img::before{
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background:var(--first-color);
+    left: -35px;
+    top:-35px;
+    border-radius: 0.5rem;
+    z-index: -5;
+}
+
+.apropos-row-text{
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.apropos-pasteur{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: var(--first-color);
+    font-weight: bold;
+}
+.apropos-text{
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+.btn{
+    padding: 15px;
+    background: var(--first-color);
+    color: #f2f2f2;
+    width: max-content;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 0.5rem;
+}
+
+
+/*Contenu*/
+
+.contenu{
+    display: flex;
+    justify-content: center;
+}
+.lesContenus{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.contenuRow{
+    width: 280px;
+    background: #fff;
+    box-shadow: 0px 4px 14px hsl(355deg 25% 15% / 10%);
+    border-radius: 0.5rem;
+    transition: 0.5s;
+    cursor:pointer;
+}
+.contenuRow:hover{
+    transform: scale(1.1);
+}
+.contenu-img{
+    position: relative;
+}
+.contenu-image{
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+}
+.span-date{
+    position: absolute;
+    top:0;
+    left:0;
+    background: var(--first-color);
+    color: #fff;
+    font-size : 0.8rem;
+    padding: 8px 10px 8px 0px;
+    border-radius: 0.5rem;
+}
+.icon-contenu{
+    padding : 0px 10px 0px 10px;
+}
+.icon-red{
+    color: red;
+}
+.row-desc{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.contenu-like{
+    display: flex;
+    color: gray;
+    font-size: 12px;
+    font-weight: 300;
+}
+.like-commentaire{
+    display: flex;
+    align-items: center;
+}
+.contenu-desc{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin: 5px 0 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.contenu-btn{
+    background: var(--first-color);
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-radius: 0.5rem;
+}
+
+/*Programme*/
+.programme{
+    display: flex;
+    justify-content: center;
+}
+.programme-culte{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.programme-rowCulte{
+    flex: 1;
+    background: var(--first-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 1.5rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+}
+.programme-rowCulte:hover{
+    transform: scale(1.1);
+}
+.programme-img{
+    border: 4px solid #fff;
+    border-radius: 50px;
+    width: 106px;
+    height: 106px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.programme-image{
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.programme-h2{
+    font-weight: 300;
+}
+.programme-desc{
+    text-align: center;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.programme-btn{
+    background: #fff;
+    color: var(--first-color);
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    border-radius: 0.5rem;
+}
+
+/*apropos de l'eglise*/
+.apropos-eglise{
+    background: var(--first-color);
+    padding-bottom: 20px;
+}
+.title-color{
+    color:var(--background);
+}
+.apropos-title1::after{
+    content: '';
+    position: absolute;
+    bottom:0;
+    width: 300px;
+    height: 5px;
+    background: var(--background);
+
+}
+.apropos-white{
+    background: var(--background);
+}
+.apropos-border{
+    border: 2px solid var(--background);
+}
+.apropos-limite{
+    text-align:justify;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 9;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+/*Faq*/
+.faq-container{
+    display: flex;
+    gap: 1.5rem;
+}
+.faq-image{
+    flex:1;
+}
+.faq-row-quiz{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.faq-question{
+    padding: 15px 15px;
+    background: var(--text-color);
+    color:var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.faq-reponse-quiz{
+    display: none;
+}
+.faqQuestion{
+    display: block;
+}
+.icon-plus{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+/*footer*/
+footer{
+    width: 100%;
+    background: var(--first-color);
+}
+.footer{
+    display: flex;
+    width: 1025px;
+    margin: 0 auto;
+    padding: 40px 0px;
+}
+.footer-left, .footer-center, .footer-center1, .footer-right{
+    flex:1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    color: var(--background);
+}
+.footer-image{
+    height: 90px;
+    width: 90px;
+    display: flex;
+    border-radius: 50%;
+    border: 5px solid var(--background);
+    overflow: hidden;
+}
+.footer-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.footer-row{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.icon-footer{
+    font-size: 1.6rem;
+}
+.red{
+    color:red;
+}
+.footer-adresse a{
+    font-size: 0.9rem;
+    color: #f2f2f2;
+}
+.footer-adresseLi a{
+    color: var(--background);
+}
+.footer-adresse a:hover{
+    color: red;
+}
+/*footer center*/
+.footer-h2{
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+.footer-ul{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/*footer center*/
+
+.footer-right{
+    flex: 1;
+}
+.footer-form{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.footer-input{
+    outline: none;
+    padding: 6px;
+    background: var(--background);
+    border: none;
+    border-radius: 0.5rem;
+}
+.input-red{
+    background: red;
+    color: var(--background);
+    cursor: pointer;
+}
+.input-red:hover{
+    border: 2px solid red;
+    background: transparent;
+    color: red;
+    padding: 6px;
+}
+
+.footer-methode{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.footer-paiement{
+    height: 40px;
+    width: 60px;
+    border-radius: 0.5rem;
+}
+/*Programme*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*media querie*/
+
+@media screen and (max-width:992px){
+    .container{
+        width: 900px;
+        padding: 10px;
+    }
+    .nav-left{
+        flex:0.6;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .nav-left .logo{
+        width: 90px;
+    }
+    .navCenter{
+        position: fixed;
+        right: -600px;
+        background: rgb(0, 0, 0);
+        width: 60%;
+        height: 100vh;
+        top: 60px;
+        align-items:start;
+        transition: 0.7s;
+    }
+    .navUl{
+        display:flex;
+        flex-direction:column;
+        margin-top:50px;
+    }
+        
+    .navUl li{
+        display: block;
+        padding-top: 50px;
+    }
+    .navUl li a{
+        font-size: 25px;
+        color: #fff;
+    }
+        
+    .navToggle{
+        right: 0;
+        position: fixed;
+        background: rgb(0, 0, 0);
+        width: 60%;
+        height: 100vh;
+        top: 60px;
+        align-items:start;
+    }
+    
+    .bars{
+        display: block;
+        cursor: pointer;
+    }
+    .nav-right{
+        box-shadow: none;
+    }
+    .contact{
+        display:none;
+    
+    }
+    .sociaux i{
+        font-size: 25px;
+        padding: 10px;
+    }
+    .header-container{
+        gap:25px
+    }
+    .headerTitle{
+        font-size: 4rem
+    }  
+    .sousTitle{
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing:2px;
+    }
+    .description-header{
+        font-size: 1rem;
+        text-align: center;
+        letter-spacing:2px
+    }
+    .headerBtn{
+        padding: 8px 10px;
+        font-size: 15px;
+    }
+    .bienvenu-txt{
+        flex:2;
+        margin-left: 60px;
+    }
+    .bienvenu-row-got{
+        flex: 1;
+        margin-right: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1.5rem;
+    }
+    .apropos-row-text{
+        gap: 20px;
+    }
+    .apropos-pasteur{
+        font-size: 1.5rem;
+    }
+    .footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 40px 0 10px 40px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .footer-right{
+        width: 80%;
+    }   
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 100%;
+        max-width: 670px;
+    }
+    .bars{
+        padding-right: 10px;
+    }
+    .description-header{
+        font-size: .9rem;
+    }
+    .sous-title-apropos{
+        text-align: center;
+    }
+    .bienvenu-txt{
+        font-size: .7rem;
+    }
+    .apropos-row{
+        display: flex;
+        flex-direction: column;
+    }
+    .apropos-img::before{
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background:var(--first-color);
+        border-radius: 0.5rem;
+        z-index: -5;
+    }
+    .programme-culte{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .apropos-pasteur{
+        font-size: 1.5rem;
+    }
+   .faq-container{
+        flex-direction: column;
+   }
+}
+
+@media screen and (max-width: 721px){
+    .container{
+        width: 100%;
+        max-width: 680px;
+    }
+    .apropos-title{
+        margin: 100px 10px;
+    }
+    .apropos-title::after{
+        width: 200px;
+    
+    }
+    .title{
+        font-size: 2rem;
+    }
+
+}
+
+@media screen and (max-width:568px){
+    .container{
+        width: 100%;
+        max-width: 500px;
+    }
+    .navUl li a{
+        font-size: 15px;
+    }
+    .footer-paiement{
+        height: 40px;
+        width: 45px;
+        border-radius: 0.5rem;
+    }
+}
+
+@media screen and (max-width:414px){
+    .container{
+        width: 100%;
+        max-width: 400px;
+        overflow-x: hidden;
+    }
+    .nav-left{
+        flex:0.5;
+    }
+    .nav-right{
+        box-shadow: none;
+        padding-right: 48px;
+        border-radius:initial;
+    }
+    .icon-rsx{
+        background: var(--background);
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        border-radius: 50%;
+    }
+    .icon-rsx:hover{
+        transform: scale(1.1);
+    }
+    .nav-left .logo{
+        width: 50px;
+    }
+    .sociaux i{
+        font-size: 15px;
+        padding: 6px;
+    }
+    .bars{
+        padding-right: 10px;
+    }
+    .headerTitle{
+        font-size: 3rem
+    }  
+    .sousTitle{
+        font-size: 1rem;
+    }
+    .description-header{
+        font-size: .8rem;
+        letter-spacing:1px
+    }
+    .headerBtn{
+        padding: 8px;
+        font-size: 11px;
+    }
+    .bienvenu-txt{
+        margin-left: 20px;
+    }
+    .bienvenu-row-got{
+        margin-right: 20px;
+        gap: 1rem;
+    }
+    .bienvenu-got{
+        padding: 8px;
+        font-size: .7rem;
+    }
+    .title{
+        font-size: 1.7rem;
+    }
+    .sous-title-apropos{
+        font-size: .8rem;
+    }
+    .programme-culte{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .programme-rowCulte{
+        width: 300px;     
+    }
+    .faq-question{
+        font-size: .7rem;
+    }
+    footer{
+        width: 100%;
+        
+    }
+    .footer{
+       padding-left: 25px;
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-adresse{
+        font-size: 12px;
+    }
+    .footer-adresseLi{
+        font-size: 11px;
+    }
+    .footer-h2{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:375px){
+
+    .container{
+        width: 100%;
+        width: 375px;
+        overflow: hidden;
+        margin: 0;
+    }
+    .nav-left{
+        flex:0.3;
+    }
+
+    .nav-left .logo{
+        width: 70px;
+    }
+    .bars{
+        margin-right: 20px;
+    }
+    .bienvenu{
+        overflow: hidden;
+        width: 375px;
+    }
+    .bienvenu-row-got{
+        flex: 1;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+    }
+    .headerBtn{
+        padding: 7px;
+        font-size: 10px;
+    }
+
+    .footer-methode{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
