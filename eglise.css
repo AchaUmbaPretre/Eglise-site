@@ -23,6 +23,7 @@
     background: var(--scroll-bar-color);
     border-radius: .5rem;
     z-index: -22;
+    display: none;
 }
 ::-webkit-scrollbar-thumb{
     background: var(--scroll-thumb-color);
@@ -871,10 +872,15 @@ footer{
 }
 
 @media screen and (max-width:414px){
+
     .container{
         width: 100%;
         max-width: 400px;
         overflow-x: hidden;
+    }
+    nav{
+        max-width: 414px;
+        overflow: hidden;
     }
     .nav-left{
         flex:0.5;
@@ -920,6 +926,9 @@ footer{
         padding: 8px;
         font-size: 11px;
     }
+    .bienvenu{
+        max-width: 414px;
+    }
     .bienvenu-txt{
         margin-left: 20px;
     }
@@ -946,7 +955,7 @@ footer{
         width: 300px;     
     }
     .faq-question{
-        font-size: .7rem;
+        font-size: .8rem;
     }
     footer{
         width: 100%;
@@ -966,15 +975,26 @@ footer{
     .footer-h2{
         font-size: 15px;
     }
+    .footer-methode{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-paiement{
+        width: 60px;
+    }
 }
 
 @media screen and (max-width:375px){
 
     .container{
         width: 100%;
-        width: 375px;
+        max-width: 360px;
         overflow: hidden;
         margin: 0;
+    }
+    nav{
+        max-width: 375px;
+        overflow: hidden;
     }
     .nav-left{
         flex:0.3;
@@ -986,9 +1006,18 @@ footer{
     .bars{
         margin-right: 20px;
     }
+    .apropos-img::before{
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background:var(--first-color);
+        border-radius: 0.5rem;
+        z-index: -5;
+    }
     .bienvenu{
         overflow: hidden;
-        width: 375px;
+        max-width: 375px;
     }
     .bienvenu-row-got{
         flex: 1;
